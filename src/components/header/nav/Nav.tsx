@@ -55,7 +55,7 @@ const Nav = () => {
             <span>Deutsch</span>
           </p>
         </div>
-        <p>Impressum</p>
+        <p className="hidden md:flex">Impressum</p>
       </div>
     </div>
   );
