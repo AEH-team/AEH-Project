@@ -10,14 +10,14 @@ const Nav = () => {
   return (
     <div className=" container mt-2 flex justify-around items-center w-full">
       <div className=" flex gap-3">
-        <FaFacebook className=" w-7 h-7 text-PRIMARY_BLUE" />
-        <img src="/public/X.png" alt="" className=" w-7 h-7 rounded-full" />
+        <FaFacebook className=" w-7 h-7 text-PRIMARY_BLUE cursor-pointer" />
+        <img src="/public/X.png" alt="" className=" w-7 h-7 rounded-full cursor-pointer" />
         <img
           src="/public/instegram.jpeg"
           alt=""
-          className=" w-7 h-7 rounded-full"
+          className=" w-7 h-7 rounded-full cursor-pointer"
         />
-        <FaYoutube className=" w-7 h-7 rounded-full text-red-500" />
+        <FaYoutube className=" w-7 h-7 rounded-full text-red-500 cursor-pointer" />
       </div>
       <div className="  flex items-start justify-around gap-6">
         <div>
