@@ -1,7 +1,11 @@
+import Nav from "./components/header/nav/Nav";
+
 const App = () => {
   return (
-    <div className=" bg-blue-400 text-3xl">
-      Enter
+    <div className=" container">
+      <div>
+        <Nav/>
+      </div>
     </div>
   );
 }
