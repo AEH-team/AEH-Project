@@ -5,7 +5,7 @@ import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="  flex  h-[375px] items-start justify-around p-4 ">
+    <div className="  flex h-full lg:h-[375px] items-start justify-around p-4 ">
       <div className=" flex flex-col items-center justify-center gap-2">
         <h1 className=" font-FONT_VIGA font-bold">Menu</h1>
         <ul className=" text-xs lg:text-lg mt-5">
