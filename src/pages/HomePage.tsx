@@ -1,4 +1,4 @@
-import Carousel from "../../public/carousel/Carousel";
+import Carousel from "../components/carousel/Carousel";
 
 const HomePage = () => {
   const slides: string[] = [

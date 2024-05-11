@@ -8,7 +8,7 @@ interface CarouselProps {
     slides: string[];
 }
 
-const Carousel = ({ slides }:CarouselProps) => {
+const Carousel = ({ slides }: CarouselProps) => {
     const [current, setCurrent] = useState<number>(0);
 
     const previousSlide = () => {
@@ -24,13 +24,13 @@ const Carousel = ({ slides }:CarouselProps) => {
     return (
         <div className="overflow-hidden relative">
             <div
-                className={`flex transition ease-out duration-400`}
+                className="flex transition ease-out duration-400"
                 style={{
                     transform: `translateX(-${current * 100}%)`,
                 }}
             >
                 {slides.map((s, index) => (
-                    <img className=" rounded-lg" src={s} key={index} alt={`Slide ${index}`} />
+                    <img src={s} key={index} alt={`Slide ${index}`} />
                 ))}
             </div>
 
