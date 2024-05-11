@@ -4,7 +4,7 @@ import {  BiSolidRightArrow } from "react-icons/bi";
 
 const Footer = () => {
   return (
-    <div className="  flex h-full lg:h-[375px] items-start justify-around p-4 ">
+    <div className="  flex h-full lg:h-[375px] w-full items-center justify-around p-4 ">
       <div className=" flex flex-col items-center justify-center gap-2">
         <h1 className=" w-full text-start font-FONT_VIGA text-xl font-bold">Menu</h1>
         <ul className=" text-xs lg:text-lg mt-5">
