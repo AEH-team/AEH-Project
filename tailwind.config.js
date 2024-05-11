@@ -28,6 +28,7 @@ export default {
         PRIMARY_BLUE:"#0284c7",
         PRIMARY_BLUE_ONE:"#2159e6",
         SECONDARY_BLUE:"#22d3ee",
+        Light_BLUE:"#e5f2ff",
         DARK_BLUE:"#172554",
         LIGHT_BLUE:"#eff6ff",
         PRIMARY_ORANGE:"#ee8425",
