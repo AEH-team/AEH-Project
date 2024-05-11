@@ -30,7 +30,7 @@ const Carousel = ({ slides }: CarouselProps) => {
                 }}
             >
                 {slides.map((s, index) => (
-                    <img src={s} key={index} alt={`Slide ${index}`} />
+                    <img className=" rounded-lg" src={s} key={index} alt={`Slide ${index}`} />
                 ))}
             </div>
 

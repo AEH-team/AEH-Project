@@ -11,9 +11,9 @@ const Nav = () => {
     <div className=" container mt-2 flex justify-around items-center w-full">
       <div className=" flex gap-3 items-center">
         <FaFacebook className=" w-7 h-7 text-PRIMARY_BLUE cursor-pointer" />
-        <img src="/public/X.png" alt="" className=" w-7 h-7 rounded-full cursor-pointer" />
+        <img src="/nav/X.png" alt="" className=" w-7 h-7 rounded-full cursor-pointer" />
         <img
-          src="/public/instegram.jpeg"
+          src="/nav/instegram.jpeg"
           alt=""
           className=" w-7 h-7 rounded-full cursor-pointer"
         />
