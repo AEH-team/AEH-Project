@@ -1,6 +1,5 @@
 import {  BiSolidRightArrow } from "react-icons/bi";
-import { FaFacebook, FaYoutube } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa";
+
 
 
 const Footer = () => {
