@@ -1,7 +1,7 @@
 const OrganisationPage = () => {
     return (
         <div>
-            Enter
+            organisation
         </div>
     );
 }

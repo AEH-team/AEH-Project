@@ -1,7 +1,7 @@
 const MitgliederPage = () => {
     return (
         <div>
-            Enter
+            mietgleider
         </div>
     );
 }
