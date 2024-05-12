@@ -22,7 +22,7 @@ const Carousel = ({ slides }: CarouselProps) => {
     };
 
     return (
-        <div className="overflow-hidden relative">
+        <div className="overflow-hidden relative max-w-full ">
             <div
                 className="flex transition ease-out duration-400"
                 style={{
@@ -30,7 +30,7 @@ const Carousel = ({ slides }: CarouselProps) => {
                 }}
             >
                 {slides.map((s, index) => (
-                    <img className=" rounded-lg" src={s} key={index} alt={`Slide ${index}`} />
+                    <img className=" rounded-lg lg:w-[925px] lg:h-[529px]" src={s} key={index} alt={`Slide ${index}`} />
                 ))}
             </div>
 
