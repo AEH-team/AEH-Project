@@ -1,7 +1,7 @@
 import MaxWithWrapper from "../components/MaxWithWrapper";
 import AboutUsSection from "../components/aboutSection/AboutUsSection";
 import Carousel from "../components/carousel/Carousel";
-import ImageCard from "../components/imageCard/imageCard";
+import ImageCard from "../components/imageCard/ImageCard";
 
 const HomePage = () => {
   const slides: string[] = [
