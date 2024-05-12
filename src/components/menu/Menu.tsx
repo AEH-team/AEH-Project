@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 
 const Menu = () => {
   return (
-    <div className=" flex justify-center">
-      <div className="flex items-center gap-3 lg:justify-between text-xs sm:text-sm lg:text-lg lg:w-1/2">
+    <div className=" flex justify-center w-full px-2 sm:px-3">
+      <div className="flex items-center gap-3  text-xs sm:text-xs  lg:text-lg w-full justify-around font-bold ">
         {/* Alle NavLink mit underline-Style */}
         <NavLink
           to="/home"

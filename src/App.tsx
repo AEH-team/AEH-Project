@@ -10,8 +10,8 @@ const App = () => {
   const [isMenuActive,setIsMenuActive]=useState(false)
   return (
     <div className=" ">
-        <div className={`container `}>
-            <div>
+        <div className={`container  `}>
+            <div >
                 <Nav isMenuActive = {isMenuActive} setIsMenuActive = {setIsMenuActive}/>
             </div>
             <div className=" mt-10">

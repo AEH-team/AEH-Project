@@ -1,8 +1,10 @@
+import MaxWithWrapper from "../components/MaxWithWrapper";
+
 const KontaktPage = () => {
     return (
-        <div>
+        <MaxWithWrapper>
             kontakt
-        </div>
+        </MaxWithWrapper>
     );
 }
 
