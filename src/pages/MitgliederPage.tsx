@@ -1,8 +1,10 @@
+import MaxWithWrapper from "../components/MaxWithWrapper";
+
 const MitgliederPage = () => {
     return (
-        <div>
+        <MaxWithWrapper>
             mietgleider
-        </div>
+        </MaxWithWrapper>
     );
 }
 

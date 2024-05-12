@@ -22,7 +22,7 @@ const Nav = ({ isMenuActive, setIsMenuActive }: INavProps) => {
   };
 
   return (
-    <div className="relative container mt-2 flex justify-around items-center w-full">
+    <div className="relative  my-4 flex justify-between px-5 items-center w-full">
       <div className="flex gap-3 items-center">
         <FaFacebook className="w-7 h-7 text-PRIMARY_BLUE cursor-pointer" />
         <img
