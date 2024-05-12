@@ -3,15 +3,16 @@ import Footer from "./components/footer/Footer";
 import Logo from "./components/header/logo/Logo";
 import Nav from "./components/header/nav/Nav";
 import Menu from "./components/menu/Menu";
+import { useState } from "react";
 
 
 const App = () => {
- 
+  const [isMenuActive,setIsMenuActive]=useState(false)
   return (
     <div className=" ">
-        <div className=" container ">
+        <div className={`container `}>
             <div>
-                <Nav/>
+                <Nav isMenuActive = {isMenuActive} setIsMenuActive = {setIsMenuActive}/>
             </div>
             <div className=" mt-10">
                 <Logo/>

@@ -8,12 +8,12 @@ const HomePage = () => {
     "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
   ];
   return (
-    <div className=" container ">
-      <div className="w-1/2 m-auto pt-8 ">
+    <div className=" container mx-auto ">
+       <div className="md:w-1/2  max-w-full mx-3 md:m-auto pt-8 ">
         <Carousel slides={slides} />
-      </div>
+      </div> 
       <div className=" w-full flex justify-center">
-        <div className=" w-1/2 flex flex-col justify-center">
+        <div className=" sm:w-1/2 w-full mx-3 flex flex-col justify-center">
           <div className=" w-1/2  flex  justify-start mt-8">
             <h1 className=" lg:text-4xl text-xl">
               {" "}
