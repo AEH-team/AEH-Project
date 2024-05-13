@@ -14,7 +14,7 @@ const Nav = ({ isMenuActive, setIsMenuActive }: INavProps) => {
 
   const toggleMenu = () => {
     setIsMenuActive(!isMenuActive);
-    console.log("khalil");
+   
   };
 
   const closeMenu = () => {
@@ -100,7 +100,7 @@ const Nav = ({ isMenuActive, setIsMenuActive }: INavProps) => {
         }`}
         onClick={closeMenu}
       >
-        <div className=" fixed top-10 transition-all duration-75 w-2/2 h-fit right-9  backdrop-filter backdrop-blur-lg rounded-lg">
+        <div className=" fixed top-11 transition-all duration-75 w-2/2 h-fit right-5  backdrop-filter backdrop-blur-lg rounded-lg">
           <div className=" flex flex-col gap-4 items-center justify-center my-5 p-2 cursor-pointer ">
             <p className="flex items-center gap-2 cursor-pointer p-2 border-b-2 hover:scale-110">
               <span>
