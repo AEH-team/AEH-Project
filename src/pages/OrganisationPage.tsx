@@ -1,4 +1,4 @@
-import { Component } from "react";
+
 import MaxWithWrapper from "../components/MaxWithWrapper";
 import PresidiumSection from "../components/organisationPräsidiumSection/PresidiumSection";
 
@@ -118,13 +118,13 @@ const OrganisationPage = () => {
           </h1>
           <div className=" flex flex-col gap-4">
             <p className=" text-pretty mt-5">
-              Die AEH ist ein Zusammenschluss von Organisationen, die als
+              Die AEH ist ein Zusammenschluss von Organisationen, die als
               Interessenvertretung von und für Menschen mit Behinderungen aktiv
-              sind. Alle in der AEH zusammengeschlossenen Organisationen haben
+              sind. Alle in der AEH zusammengeschlossenen Organisationen haben
               ihren Sitz in einem der europäischen Staaten.
             </p>
             <p className=" text-pretty">
-              Die AEH ist parteipolitisch und konfessionell neutral. Die
+                Die AEH ist parteipolitisch und konfessionell neutral. Die
               Geschäfte werden von einem ehrenamtlich tätigen Präsidium geführt,
               das aus einem/einer Präsident:in, drei Vizepräsident:innen,
               einer/einem Schatzmeister:in und Beisitzer:innen besteht.
