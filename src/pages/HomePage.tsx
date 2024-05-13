@@ -1,11 +1,12 @@
 import MaxWithWrapper from "../components/MaxWithWrapper";
 import AboutUsSection from "../components/aboutSection/AboutUsSection";
 import Carousel from "../components/carousel/Carousel";
-import ImageCard from "../components/imageCardsOrganisation/imageCard";
+import ImageCard from "../components/imagecard/ImageCard";
 
 const HomePage = () => {
   const slides: string[] = [
-    "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
+      "/caroussel/Slide1.png",
+      "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
     "https://wallpapercave.com/wp/wp3386769.jpg",
     "https://wallpaperaccess.com/full/809523.jpg",
     "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
@@ -32,25 +33,25 @@ const HomePage = () => {
     },
   ];
   return (
-    <MaxWithWrapper>
-       <div className=" w-full  max-w-full   pt-8 ">
-        <Carousel slides={slides} />
-      </div> 
-      <div className=" w-full  ">
-        <div className=" w-full mx-3 ">
-         
-         <AboutUsSection/>
-         
-        </div>
-      </div>
-      <div className="flex  items-center justify-center bg-neutral-800">
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {images.map((image, index) => (
-              <ImageCard key={index} {...image} />
-            ))}
+      <MaxWithWrapper>
+          <div className="w-[60%] m-auto pt-16">
+              <Carousel slides={slides}/>
           </div>
-        </div>
-    </MaxWithWrapper>
+          <div className=" w-full  ">
+              <div className=" w-full mx-3 ">
+
+                  <AboutUsSection/>
+
+              </div>
+          </div>
+          <div className="flex  items-center justify-center bg-neutral-800">
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+                  {images.map((image, index) => (
+                      <ImageCard key={index} {...image} />
+                  ))}
+              </div>
+          </div>
+      </MaxWithWrapper>
   );
 };
 
