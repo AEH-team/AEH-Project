@@ -45,6 +45,11 @@ const HomePage = () => {
 
               </div>
           </div>
+          <div className="flex justify-center items-center mt-10 mb-8">
+              <p className="font-FONT_ROBOTO font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl mr-4">Unsere</p>
+              <p className="font-FONT_ROBOTO text-3xl md:text-4xl lg:text-5xl xl:text-7xl">Aktion</p>
+          </div>
+
           <div className="flex  items-center justify-center bg-neutral-800">
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                   {images.map((image, index) => (
