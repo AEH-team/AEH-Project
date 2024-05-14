@@ -1,4 +1,3 @@
-import { Component } from "react";
 import MaxWithWrapper from "../components/MaxWithWrapper";
 import PresidiumSection from "../components/organisationPräsidiumSection/PresidiumSection";
 

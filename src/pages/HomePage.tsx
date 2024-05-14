@@ -3,6 +3,7 @@ import AboutUsSection from "../components/aboutSection/AboutUsSection";
 import Carousel from "../components/carousel/Carousel";
 import ImageCard from "../components/imagecard/ImageCard";
 
+
 const HomePage = () => {
   const slides: string[] = [
       "/caroussel/Slide1.png",
