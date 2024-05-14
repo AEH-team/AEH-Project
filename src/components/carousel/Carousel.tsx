@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
     BsFillArrowRightCircleFill,
     BsFillArrowLeftCircleFill,
@@ -8,7 +8,7 @@ interface CarouselProps {
     slides: string[];
 }
 
-const Carousel = ({ slides }: CarouselProps) => {
+const Carousel: React.FC<CarouselProps> = ({ slides }) => {
     const [current, setCurrent] = useState<number>(0);
 
     const previousSlide = () => {
@@ -22,19 +22,19 @@ const Carousel = ({ slides }: CarouselProps) => {
     };
 
     return (
-        <div className="overflow-hidden relative max-w-full ">
+        <div className="overflow-hidden relative rounded-lg">
             <div
-                className="flex transition ease-out duration-400"
+                className={`flex transition ease-out duration-400 rounded-lg`}
                 style={{
                     transform: `translateX(-${current * 100}%)`,
                 }}
             >
                 {slides.map((s, index) => (
-                    <img className=" rounded-lg lg:w-[925px] lg:h-[529px]" src={s} key={index} alt={`Slide ${index}`} />
+                    <img key={index} src={s} alt={`slide ${index}`} />
                 ))}
             </div>
 
-            <div className="absolute top-0 h-full w-full flex justify-between items-center text-white px-10 text-3xl">
+            <div className="absolute top-0 h-full w-full flex justify-between items-center px-5 md:px-10 text-white text-3xl">
                 <button onClick={previousSlide}>
                     <BsFillArrowLeftCircleFill />
                 </button>
@@ -44,12 +44,14 @@ const Carousel = ({ slides }: CarouselProps) => {
             </div>
 
             <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
-                {slides.map((_, index) => (
+                {slides.map((_, i) => (
                     <div
-                        onClick={() => setCurrent(index)}
-                        key={"circle" + index}
-                        className={`rounded-full w-5 h-5 cursor-pointer ${
-                            index === current ? "bg-white" : "bg-gray-500"
+                        onClick={() => {
+                            setCurrent(i);
+                        }}
+                        key={"circle" + i}
+                        className={`rounded-full w-3 h-3 md:w-5 md:h-5 cursor-pointer  ${
+                            i === current ? "bg-white" : "bg-gray-500"
                         }`}
                     ></div>
                 ))}
