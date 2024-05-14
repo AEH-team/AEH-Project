@@ -7,10 +7,11 @@ import ImageCard from "../components/imagecard/ImageCard";
 const HomePage = () => {
   const slides: string[] = [
       "/caroussel/Slide1.png",
-      "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
-    "https://wallpapercave.com/wp/wp3386769.jpg",
-    "https://wallpaperaccess.com/full/809523.jpg",
-    "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
+      "/caroussel/Slide2.png",
+      "/caroussel/Slide3.png",
+      "/caroussel/Slide4.png",
+      "/caroussel/Slide5.png",
+
   ];
 
   const images = [
@@ -35,7 +36,7 @@ const HomePage = () => {
   ];
   return (
       <MaxWithWrapper>
-          <div className="w-[60%] m-auto pt-16">
+          <div className=" ">
               <Carousel slides={slides}/>
           </div>
           <div className=" w-full  ">
@@ -45,6 +46,12 @@ const HomePage = () => {
 
               </div>
           </div>
+          <div className="w-auto flex justify-start mt-8 mb-8">
+              <h1 className="lg:text-4xl text-xl">
+                  <span className="font-bold">Unser</span> Aktion
+              </h1>
+          </div>
+
           <div className="flex  items-center justify-center bg-neutral-800">
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                   {images.map((image, index) => (

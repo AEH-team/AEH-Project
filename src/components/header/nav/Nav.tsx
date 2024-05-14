@@ -22,20 +22,20 @@ const Nav = ({ isMenuActive, setIsMenuActive }: INavProps) => {
   };
 
   return (
-    <div className="relative  my-4 flex justify-between px-5 items-center w-full">
+    <div className="relative  my-4 mx-0.5 flex justify-around px-96 items-center w-full">
       <div className="flex gap-3 items-center">
-        <FaFacebook className="w-7 h-7 text-PRIMARY_BLUE cursor-pointer" />
+        <FaFacebook className="w-5 h-5 text-PRIMARY_BLUE cursor-pointer" />
         <img
           src="/nav/X.png"
           alt=""
-          className="w-7 h-7 rounded-full cursor-pointer"
+          className="w-5 h-5 rounded-full cursor-pointer"
         />
         <img
           src="/nav/instegram.jpeg"
           alt=""
-          className="w-7 h-7 rounded-full cursor-pointer"
+          className="w-5 h-5 rounded-full cursor-pointer"
         />
-        <FaYoutube className="w-7 h-7 rounded-full text-red-500 cursor-pointer" />
+        <FaYoutube className="w-5 h-5 rounded-full text-red-500 cursor-pointer" />
       </div>
       <div className="sm:flex hidden items-start justify-around gap-6">
         <div className="">
@@ -51,7 +51,7 @@ const Nav = ({ isMenuActive, setIsMenuActive }: INavProps) => {
             <span>
               <ReactCountryFlag countryCode="US" />
             </span>
-            <span>English</span>
+            <span className="text-xs font-medium">English</span>
           </p>
           <p
             onClick={() => setSelectLanguage("Francais")}
@@ -65,7 +65,7 @@ const Nav = ({ isMenuActive, setIsMenuActive }: INavProps) => {
             <span>
               <ReactCountryFlag countryCode="FR" />
             </span>
-            <span>Francais</span>
+            <span className="text-xs font-medium">Francais</span>
           </p>
           <p
             onClick={() => setSelectLanguage("Deutsch")}
@@ -79,11 +79,11 @@ const Nav = ({ isMenuActive, setIsMenuActive }: INavProps) => {
             <span>
               <ReactCountryFlag countryCode="DE" />
             </span>
-            <span>Deutsch</span>
+            <span className="text-xs font-medium">Deutsch</span>
           </p>
         </div>
         
-        <p className="hidden md:flex">Impressum</p>
+        <p className="text-xs font-medium hidden md:flex">Impressum</p>
       </div>
       <div className=" flex sm:hidden">
           <div

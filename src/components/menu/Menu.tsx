@@ -2,9 +2,10 @@ import { NavLink } from "react-router-dom";
 
 const Menu = () => {
   return (
-    <div className=" flex justify-center w-full px-2 sm:px-3">
+
+    <div className=" mx-auto w-[50%] my-auto mb-14 max-w-screen-2l px-2,5 md:px-10 lg:px-24">
       <div className="flex items-center gap-3  text-xs sm:text-xs  lg:text-lg w-full justify-around font-bold ">
-        {/* Alle NavLink mit underline-Style */}
+
         <NavLink
           to="/home"
           className={({ isActive }) =>
@@ -42,6 +43,7 @@ const Menu = () => {
         </NavLink>
       </div>
     </div>
+
   );
 };
 
