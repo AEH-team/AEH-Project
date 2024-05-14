@@ -20,7 +20,7 @@ const Menu = () => {
             `hover:underline ${isActive ? "underline text-blue-600" : "text-black"}`
           }
         >
-          <p>organisation</p>
+          <p>Organisation</p>
         </NavLink>
 
         <NavLink
@@ -29,7 +29,7 @@ const Menu = () => {
             `hover:underline ${isActive ? "underline text-blue-600" : "text-black"}`
           }
         >
-          <p>mitglieder</p>
+          <p>Mitglieder</p>
         </NavLink>
 
         <NavLink
@@ -38,7 +38,7 @@ const Menu = () => {
             `hover:underline ${isActive ? "underline text-blue-600" : "text-black"}`
           }
         >
-          <p>kontakt</p>
+          <p>Kontakt</p>
         </NavLink>
       </div>
     </div>
