@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState, useEffect } from "react";
 import {
     BsFillArrowRightCircleFill,
     BsFillArrowLeftCircleFill,
@@ -8,7 +8,7 @@ interface CarouselProps {
     slides: string[];
 }
 
-const Carousel: React.FC<CarouselProps> = ({ slides }) => {
+const Carousel = ({ slides } : CarouselProps) => {
     const [current, setCurrent] = useState<number>(0);
 
     const previousSlide = () => {
@@ -20,6 +20,14 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
         if (current === slides.length - 1) setCurrent(0);
         else setCurrent(current + 1);
     };
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            nextSlide();
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [current, nextSlide, slides.length]);
 
     return (
         <div className="overflow-hidden relative rounded-lg">
@@ -34,7 +42,7 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
                 ))}
             </div>
 
-            <div className="absolute top-0 h-full w-full flex justify-between items-center px-5 md:px-10 text-white text-3xl">
+            <div className="absolute top-0 h-full w-full flex justify-between items-center px-5 md:px-10 text-PRIMARY_WHITE text-3xl">
                 <button onClick={previousSlide}>
                     <BsFillArrowLeftCircleFill />
                 </button>
@@ -50,8 +58,8 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
                             setCurrent(i);
                         }}
                         key={"circle" + i}
-                        className={`rounded-full w-3 h-3 md:w-5 md:h-5 cursor-pointer  ${
-                            i === current ? "bg-white" : "bg-gray-500"
+                        className={`rounded-full w-2 h-2 md:w-2 md:h-2 cursor-pointer  ${
+                            i === current ? "bg-PRIMARY_WHITE" : "bg-PRIMARY_GRAY"
                         }`}
                     ></div>
                 ))}
