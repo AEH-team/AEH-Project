@@ -6,8 +6,8 @@ import { fadeIn } from "../../utils/motin";
 
 const Footer = () => {
   return (
-      <div className="mx-auto w-[53%] my-auto  max-w-screen-2l px-2,5 md:px-10 lg:px-24">
-        <div className=" container  flex h-full  w-full items-center justify-around p-4 ">
+      <div className="mx-auto w-full my-auto  max-w-screen-2l ">
+        <div className=" container  flex h-full  w-full items-center justify-around md:px-28">
           <motion.div
               variants={fadeIn("left", 0.8)}
               initial="hidden"
@@ -75,18 +75,27 @@ const Footer = () => {
               whileInView="show"
               viewport={{margin: "100px"}}
           >
-            <div className=" flex items-center justify-center flex-col gap-5">
+            <div className=" flex items-center justify-center flex-col gap-2">
               <div className=" flex w-full   items-center gap-2">
                 <p><img src="/footer/youtube.png" alt="youtube"
-                        className="  w-5 h-5 lg:w-10 lg:h-10 rounded-full text-LIGHT_BLUE"/></p>
-                <p><img src="/footer/facebook.png" className="  w-5 h-5 lg:w-5 lg:h-5"/></p>
-                <p><img src="/footer/linkedin.png" className=" w-5 h-5 md:w-7 md:h-7 rounded-full" alt=""/></p>
-                <p><img src="/footer/twitter.png" className=" w-5 h-5 md:w-7 md:h-7 rounded-full" alt=""/></p>
-                <p><img src="/footer/instegram.png" className=" w-5 h-5 md:w-7 md:h-7 rounded-full" alt=""/></p>
-                <p><img src="/footer/tiktok.png" className="  w-5 h-5 lg:w-10 lg:h-10"/></p>
+                        className="  w-5 h-5 lg:w-7 lg:h-7 rounded-full text-LIGHT_BLUE cursor-pointer"/></p>
+                <p><img src="/footer/facebook.png" className="  w-5 h-5 lg:w-7 lg:h-7 cursor-pointer"/></p>
+                <p><img src="/footer/linkedin.png" className=" w-5 h-5 md:w-7 md:h-7 rounded-full cursor-pointer" alt=""/></p>
+                <p><img src="/footer/twitter.png" className=" w-5 h-5 md:w-7 md:h-7 rounded-full cursor-pointer" alt=""/></p>
+                <p><img src="/footer/instegram.png" className=" w-5 h-5 md:w-7 md:h-7 rounded-full cursor-pointer" alt=""/></p>
+                <p><img src="/footer/tiktok.png" className="  w-5 h-5 lg:w-7 lg:h-7"/></p>
               </div>
-              <div>
-                <img className=" lg:w-[441px] lg:h-[150px] w-62 h-32" src="/footer/image4.png" alt=""/>
+              <div className=" flex gap-4 ">
+                <div><img className="  w-20 h-30 cursor-pointer" src="/footer/image4.png" alt=""/></div>
+                <div>
+                  <p className=" flex flex-col">
+                    <span className=" font-bold text-xl">Interessiert?</span>
+                    <span>Interessiert? kontakt Aufnehemen!</span>
+                  </p>
+                 <div className=" w-full text-end">
+                 <button className=" mt-4  bg-SECONDARY_WHITE px-8 py-1 rounded-full font-bold hover:bg-Light_BLUE border-2 hover:scale-110">Kontakt</button>
+                 </div>
+                </div>
               </div>
             </div>
           </motion.div>

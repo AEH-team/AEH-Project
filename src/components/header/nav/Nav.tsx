@@ -1,8 +1,7 @@
+import React, { useState } from "react";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
+import { BiSolidDownArrow, BiSolidUpArrow } from "react-icons/bi";
 import ReactCountryFlag from "react-country-flag";
-import { BiSolidDownArrow } from "react-icons/bi";
-import { useState } from "react";
-import { TbWorld } from "react-icons/tb";
 
 interface INavProps {
   isMenuActive: boolean;
@@ -10,119 +9,92 @@ interface INavProps {
 }
 
 const Nav = ({ isMenuActive, setIsMenuActive }: INavProps) => {
-  const [selectLanguage, setSelectLanguage] = useState("English");
+  const [selectLanguage, setSelectLanguage] = useState({
+    language: "Deutsch",
+    countryCode: "DE"
+  });
 
   const toggleMenu = () => {
     setIsMenuActive(!isMenuActive);
-   
   };
 
   const closeMenu = () => {
     setIsMenuActive(false);
   };
 
+  const handleLanguageClick = (language: string, countryCode: string) => {
+    setSelectLanguage({ language, countryCode });
+    closeMenu();
+    console.log(language);
+  };
+
   return (
-    <div className="relative  my-4 mx-0.5 flex justify-around px-96 items-center w-full">
-      <div className="flex gap-3 items-center">
-        <FaFacebook className="w-5 h-5 text-PRIMARY_BLUE cursor-pointer" />
+    <div className="my-4 mx-0.5 flex justify-between items-center w-full">
+      <div className="relative flex gap-3 items-center">
+        <FaFacebook className="w-8 h-8 text-PRIMARY_BLUE cursor-pointer" />
         <img
           src="/nav/X.png"
           alt=""
-          className="w-5 h-5 rounded-full cursor-pointer"
+          className="w-8 h-8 rounded-full cursor-pointer"
         />
         <img
           src="/nav/instegram.jpeg"
           alt=""
-          className="w-5 h-5 rounded-full cursor-pointer"
+          className="w-8 h-8 rounded-full cursor-pointer"
         />
-        <FaYoutube className="w-5 h-5 rounded-full text-red-500 cursor-pointer" />
+        <FaYoutube className="w-8 h-8 rounded-full text-red-500 cursor-pointer" />
       </div>
-      <div className="sm:flex hidden items-start justify-around gap-6">
-        <div className="">
-          <p
-            onClick={() => setSelectLanguage("English")}
-            className="flex items-center gap-2 cursor-pointer"
+      <div className="flex items-center justify-around gap-6">
+        <div className="flex ">
+          <div
+            onClick={toggleMenu}
+            className="flex  cursor-pointer text-sm sm:text-xl px-4 py-1  rounded-lg items-center gap-3"
           >
-            <span
-              className={selectLanguage === "English" ? "flex " : "invisible"}
-            >
-              <BiSolidDownArrow />
+            {/* Display the selected language and flag */}
+            <span className="flex gap-2 items-center font-bold">
+              <ReactCountryFlag countryCode={selectLanguage.countryCode} />
+              {selectLanguage.language}
             </span>
+            {isMenuActive ? (
+              <span onClick={closeMenu}><BiSolidDownArrow /></span>
+            ) : (
+              <span onClick={toggleMenu}><BiSolidUpArrow /></span>
+            )}
+          </div>
+        </div>
+        <p className=" text-sm sm:text-xl font-medium hidden md:flex">Impressum</p>
+      </div>
+      {isMenuActive && (
+        <div className="absolute top-12 right-[444px] z-50 flex flex-col gap-4 rounded-lg bg-PRIMARY_WHITE py-6 px-4">
+          <p
+            onClick={() => handleLanguageClick("English", "US")}
+            className="flex items-center gap-2 cursor-pointer border-b-2 hover:scale-110"
+          >
             <span>
               <ReactCountryFlag countryCode="US" />
             </span>
-            <span className="text-xs font-medium">English</span>
+            <span className="text-sm font-medium hover:scale-110">English</span>
           </p>
           <p
-            onClick={() => setSelectLanguage("Francais")}
-            className="flex items-center gap-2 cursor-pointer"
+            onClick={() => handleLanguageClick("Francais", "FR")}
+            className="flex items-center gap-2 cursor-pointer border-b-2 hover:scale-110"
           >
-            <span
-              className={selectLanguage === "Francais" ? "flex " : "invisible"}
-            >
-              <BiSolidDownArrow />
-            </span>
             <span>
               <ReactCountryFlag countryCode="FR" />
             </span>
-            <span className="text-xs font-medium">Francais</span>
+            <span className="text-sm font-medium">Francais</span>
           </p>
           <p
-            onClick={() => setSelectLanguage("Deutsch")}
-            className="flex items-center gap-2 cursor-pointer"
+            onClick={() => handleLanguageClick("Deutsch", "DE")}
+            className="flex items-center gap-2 cursor-pointer border-b-2 hover:scale-110"
           >
-            <span
-              className={selectLanguage === "Deutsch" ? "flex " : "invisible"}
-            >
-              <BiSolidDownArrow />
-            </span>
             <span>
               <ReactCountryFlag countryCode="DE" />
             </span>
-            <span className="text-xs font-medium">Deutsch</span>
+            <span className="text-sm font-medium">Deutsch</span>
           </p>
         </div>
-        
-        <p className="text-xs font-medium hidden md:flex">Impressum</p>
-      </div>
-      <div className=" flex sm:hidden">
-          <div
-            onClick={toggleMenu}
-            className=" flex cursor-pointer text-sm px-4 py-1 bg-PRIMARY_BLUE rounded-lg  items-center gap-1"
-          >
-            <TbWorld />
-            <span>Sprachen</span>
-          </div>
-        </div>
-      <div
-        className={`absolute top-0 left-0 bg-transparent w-full h-screen z-50  ${
-          isMenuActive ? "flex" : "hidden"
-        }`}
-        onClick={closeMenu}
-      >
-        <div className=" fixed top-11 transition-all duration-75 w-2/2 h-fit right-5  backdrop-filter backdrop-blur-lg rounded-lg">
-          <div className=" flex flex-col gap-4 items-center justify-center my-5 p-2 cursor-pointer ">
-            <p className="flex items-center gap-2 cursor-pointer p-2 border-b-2 hover:scale-110">
-              <span>
-                <ReactCountryFlag countryCode="FR" />
-              </span>
-              <span>Francais</span>
-            </p>
-            <p className="flex items-center gap-2  p-2 border-b-2 cursor-pointer hover:scale-110">
-              <span>
-                <ReactCountryFlag countryCode="DE" />
-              </span>
-              <span>Deutsch</span>
-            </p>
-            <p className="flex items-center gap-2  p-2 cursor-pointer hover:scale-110">
-              <span>
-                <ReactCountryFlag countryCode="EN" />
-              </span>
-              <span>English</span>
-            </p>
-          </div>
-        </div>
-      </div>
+      )}
     </div>
   );
 };

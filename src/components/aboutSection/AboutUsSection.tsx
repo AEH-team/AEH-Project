@@ -13,19 +13,19 @@ const AboutUsSection = () => {
                     </div>
 
                     <p className="relative text-justify leading-normal">
-                        Die AEH wurde 1979 gegründet, um Menschen mit Behinderungen zu <br/>
-                        unterstützen, wobei die Implementierung der UN- <br/>
+                        Die AEH wurde 1979 gegründet, um Menschen mit Behinderungen zu 
+                        unterstützen, wobei die Implementierung der UN- 
                         Behindertenrechtskonvention (UNBRK) ein zentrales Ziel darstellt.
                     </p>
                     <p className="text-balance leading-normal">
-                        Als Mitbegründerin des Europäischen Behindertenforums (EDF) ist die AEH <br/>
-                         Teil einer bedeutenden Institution, die sich auf europäischer und <br/>
-                         internationaler Ebene für die Interessen von Menschen mit Behinderungen  <br/>
+                        Als Mitbegründerin des Europäischen Behindertenforums (EDF) ist die AEH 
+                         Teil einer bedeutenden Institution, die sich auf europäischer und 
+                         internationaler Ebene für die Interessen von Menschen mit Behinderungen  
                         einsetzt.
                     </p>
                     <p className="text-justify leading-normal">
-                        Aktuell konzentriert sich die AEH auf die Herausforderungen, die sich aus<br/>
-                        der Alterung von Menschen mit Behinderungen ergeben, insbesondere im <br/>
+                        Aktuell konzentriert sich die AEH auf die Herausforderungen, die sich aus
+                        der Alterung von Menschen mit Behinderungen ergeben, insbesondere im 
                          Hinblick auf die Verbesserung ihrer Wohnsituation.
                     </p>
                     <div className="w-full flex justify-end">

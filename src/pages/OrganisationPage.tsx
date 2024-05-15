@@ -99,9 +99,9 @@ const OrganisationPage = () => {
           
       ] 
   return (
-    <MaxWithWrapper>
+    <>
       <div className=" w-full flex flex-col justify-center">
-        <div className=" w-full flex justify-center mt-5">
+        <div className=" w-full flex justify-center ">
           <img className="w-full" src="/organisation/organisation1.png" alt="" />
         </div>
         <div className=" flex flex-col gap-8 mt-5">
@@ -150,7 +150,7 @@ const OrganisationPage = () => {
           </div>
         </div>
       </div>
-    </MaxWithWrapper>
+    </>
   );
 };
 
