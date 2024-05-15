@@ -4,14 +4,14 @@ const Logo = () => {
   return (
     <div className=" px-5 mt-2 relative container flex items-center justify-center  w-full">
       <div className=" w-full flex justify-center h-auto ">
-        <img className="mx-auto w-[25%] rounded-lg sm:rounded-none" src={AEHLogo} alt="AEH Logo" />
+        <img className="mx-auto w-full sm:px-20 rounded-lg sm:rounded-none" src={AEHLogo} alt="AEH Logo" />
       </div>
       <div
-        className=" flex flex-col items-end px-48  gap-1 absolute bottom-0 lg:right-64 xl:right-96 md:right-48 sm:right-40 right-10 m-4 text-xs sm:text-xs lg:text-sm "
+        className=" flex flex-col items-end lg:px-48  gap-1 absolute bottom-0 lg:right-64 xl:right-0 md:right-48  right-0 m-4 text-xs sm:text-xs lg:text-sm "
       >
-        <p className="text-xs font-medium text-PRIMARY_BLUE_ONE">Action Européenne des Handicapés</p>
-        <p className="text-xs font-medium text-PRIMARY_BLUE_ONE">European Action of Persons with Disabilities</p>
-        <p className="text-xs font-medium text-PRIMARY_BLUE_ONE">Europäische Behindertenaktion</p>
+        <p className="text-xs sm:text-sm font-medium text-PRIMARY_BLUE_ONE cursor-pointer hover:underline">Action Européenne des Handicapés</p>
+        <p className="text-xs sm:text-sm font-medium text-PRIMARY_BLUE_ONE cursor-pointer hover:underline">European Action of Persons with Disabilities</p>
+        <p className="text-xs sm:text-sm font-medium text-PRIMARY_BLUE_ONE cursor-pointer hover:underline">Europäische Behindertenaktion</p>
       </div>
     </div>
   );

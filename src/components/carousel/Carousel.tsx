@@ -30,19 +30,19 @@ const Carousel = ({ slides } : CarouselProps) => {
     }, [current, nextSlide, slides.length]);
 
     return (
-        <div className="overflow-hidden relative rounded-lg">
+        <div className="overflow-hidden relative rounded-lg w-full">
             <div
-                className={`flex transition ease-out duration-400 rounded-lg`}
+                className={`flex transition ease-out duration-400 rounded-lg w-full h-[500px]`}
                 style={{
                     transform: `translateX(-${current * 100}%)`,
                 }}
             >
                 {slides.map((s, index) => (
-                    <img key={index} src={s} alt={`slide ${index}`} />
+                    <img className="w-full h-fit" key={index} src={s} alt={`slide ${index}`} />
                 ))}
             </div>
 
-            <div className="absolute top-0 h-full w-full flex justify-between items-center px-5 md:px-10 text-PRIMARY_WHITE text-3xl">
+            <div className="absolute top-0 h-full w-full flex justify-between items-center px-5 md:px-10 text-PRIMARY_WHITE text-3xl ">
                 <button onClick={previousSlide}>
                     <BsFillArrowLeftCircleFill />
                 </button>
@@ -51,9 +51,10 @@ const Carousel = ({ slides } : CarouselProps) => {
                 </button>
             </div>
 
-            <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
+            <div className="absolute bottom-0 py-4 flex  justify-center gap-3 w-full">
                 {slides.map((_, i) => (
-                    <div
+                    <div 
+                    
                         onClick={() => {
                             setCurrent(i);
                         }}

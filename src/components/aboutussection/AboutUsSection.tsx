@@ -3,8 +3,8 @@
 const AboutUsSection = () => {
     return (
         <div className="w-full flex justify-center">
-            <div className="w-1/2 flex flex-col justify-center">
-                <div className="w-1/2 flex justify-start mt-8">
+            <div className="w-full flex flex-col justify-center">
+                <div className="w-full flex justify-start mt-8">
                     <h1 className="lg:text-4xl text-xl">
                         <span className="font-bold">Wer</span> sind wir
                     </h1>

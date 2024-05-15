@@ -4,32 +4,39 @@ import Logo from "./components/header/logo/Logo";
 import Nav from "./components/header/nav/Nav";
 import Menu from "./components/menu/Menu";
 import { useState } from "react";
-
+import MaxWithWrapper from "./components/MaxWithWrapper";
 
 const App = () => {
-  const [isMenuActive,setIsMenuActive]=useState(false)
+  const [isMenuActive, setIsMenuActive] = useState(false);
   return (
-    <div className=" ">
-        <div className={`container  `}>
-            <div >
-                <Nav isMenuActive = {isMenuActive} setIsMenuActive = {setIsMenuActive}/>
+    <div className=" w-full">
+    
+       
+          <MaxWithWrapper>
+            <div>
+              <Nav
+                isMenuActive={isMenuActive}
+                setIsMenuActive={setIsMenuActive}
+              />
             </div>
             <div className=" mt-10">
-                <Logo/>
+              <Logo />
             </div>
             <div className=" mt-10">
-                <Menu/>
+              <Menu />
             </div>
           
-            <div>
-          <Outlet/>
-        </div>
-        </div>
 
-      <div className=" w-full bg-LIGHT_BLUE  bottom-0 mt-10  ">
-        <Footer />
+          <div>
+            <Outlet />
+          </div>
+       
 
-      </div>
+        
+        </MaxWithWrapper>
+        <div className=" w-full bg-LIGHT_BLUE  bottom-0 mt-10  ">
+          <Footer />
+        </div>
     </div>
   );
 };
